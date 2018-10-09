@@ -17,6 +17,10 @@ git:
 #  allow_failures:
 #  - julia: nightly
 
+before_install:
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then ./test/install_ffmpeg.sh ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install ffmpeg cairo; fi
+
 ## uncomment following lines to deploy documentation
 # jobs:
 #   include:
