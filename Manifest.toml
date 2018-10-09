@@ -123,7 +123,7 @@ version = "0.2.4"
 
 [[FFmpegPipe]]
 deps = ["FileIO", "ImageMagick", "Images", "Test"]
-git-tree-sha1 = "9eca74d1b86bc8df9116ccdaab299df51f3f30bb"
+git-tree-sha1 = "ddcc460a02fbba419dacbe5d2dc6ab13f97fb350"
 repo-rev = "master"
 repo-url = "https://github.com/yakir12/FFmpegPipe.jl"
 uuid = "fa0b58cb-525a-50a0-94eb-df6eb4f580b6"
@@ -170,12 +170,6 @@ deps = ["Colors", "Distances", "LinearAlgebra", "Pkg", "ProgressMeter", "Test"]
 git-tree-sha1 = "a5de7b61f6fa98fb93c39857fa43cf40ca383b28"
 uuid = "51556ac3-7006-55f5-8cb3-34580c88182d"
 version = "0.1.1"
-
-[[ImageDraw]]
-deps = ["ColorTypes", "Compat", "Distances", "ImageCore", "LinearAlgebra", "Pkg", "Test"]
-git-tree-sha1 = "567f7fcd01e1b3383d129676753652a689d0afb4"
-uuid = "4381153b-2b60-58ae-a1ba-fd683676385f"
-version = "0.1.0"
 
 [[ImageFiltering]]
 deps = ["CatIndices", "ColorVectorSpace", "Colors", "ComputationalResources", "DataStructures", "FFTViews", "FFTW", "FixedPointNumbers", "ImageCore", "LinearAlgebra", "Logging", "MappedArrays", "OffsetArrays", "Pkg", "Random", "StaticArrays", "Statistics", "Test", "TiledIteration"]
@@ -243,15 +237,21 @@ version = "0.3.0"
 
 [[IterTools]]
 deps = ["Pkg", "SparseArrays", "Test"]
-git-tree-sha1 = "ed0787e62dc46b8d8c7c3db54391d71e0da5fefd"
+git-tree-sha1 = "3eb252416e1a5215530420cdd22b46208bb9d4c7"
 uuid = "c8e1da08-722c-5040-9ed9-7db0dc04731e"
-version = "1.0.0"
+version = "1.1.0"
 
 [[JSON]]
 deps = ["Dates", "Distributed", "Mmap", "Pkg", "Sockets", "Test", "Unicode"]
 git-tree-sha1 = "fec8e4d433072731466d37ed0061b3ba7f70eeb9"
 uuid = "682c06a0-de6a-54ab-a142-c8b1cf79cde6"
 version = "0.19.0"
+
+[[LearnBase]]
+deps = ["LinearAlgebra", "SparseArrays", "StatsBase", "Test"]
+git-tree-sha1 = "c4b5da6d68517f46f70ed5157b28336b56cd2ff3"
+uuid = "7f8f8fb0-2700-5f03-b4bd-41f8cfc144b6"
+version = "0.2.2"
 
 [[LibGit2]]
 uuid = "76f85450-5226-5b5a-8eaa-529ad045b433"
@@ -265,6 +265,12 @@ uuid = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 
 [[Logging]]
 uuid = "56ddb016-857b-54e1-b83d-db4d58db5568"
+
+[[LossFunctions]]
+deps = ["InteractiveUtils", "LearnBase", "Markdown", "Pkg", "Random", "RecipesBase", "SparseArrays", "Statistics", "StatsBase", "Test"]
+git-tree-sha1 = "b97d2e9a527733649d0205d3374d0daee352c50e"
+uuid = "30fc2ffe-d236-52d8-8643-a9d8f7c094a7"
+version = "0.5.0"
 
 [[MacroTools]]
 deps = ["Compat"]
@@ -303,6 +309,18 @@ git-tree-sha1 = "f8cd140824f74f2948ff8660bc2292e16d29c1b7"
 uuid = "6fe1bfb0-de20-5000-8ca7-80f57d26f881"
 version = "0.8.1"
 
+[[OnlineStats]]
+deps = ["DataStructures", "Dates", "LearnBase", "LinearAlgebra", "LossFunctions", "OnlineStatsBase", "PenaltyFunctions", "Pkg", "Random", "RecipesBase", "Reexport", "Statistics", "StatsBase", "SweepOperator", "Test"]
+git-tree-sha1 = "b138347bd8bc963210b5de87df8bd913671a2e9f"
+uuid = "a15396b6-48d5-5d58-9928-6d29437db91e"
+version = "0.19.1"
+
+[[OnlineStatsBase]]
+deps = ["LearnBase", "Pkg", "Test"]
+git-tree-sha1 = "520580a74e09378fb6665fa89339323d411d3df3"
+uuid = "925886fa-5bf2-5e8e-b522-a9147a512338"
+version = "0.9.1"
+
 [[OrderedCollections]]
 deps = ["Pkg", "Random", "Serialization", "Test"]
 git-tree-sha1 = "85619a3f3e17bb4761fe1b1fd47f0e979f964d5b"
@@ -314,6 +332,12 @@ deps = ["OffsetArrays", "Test"]
 git-tree-sha1 = "7da3e7e1a58cffbf10177553ae95f17b92516912"
 uuid = "5432bcbf-9aad-5242-b902-cca2824c8663"
 version = "0.4.2"
+
+[[PenaltyFunctions]]
+deps = ["InteractiveUtils", "LearnBase", "LinearAlgebra", "RecipesBase", "Reexport", "Test"]
+git-tree-sha1 = "b0baaa5218ca0ffd6a8ae37ef0b58e0df688ac8b"
+uuid = "06bb1623-fdd5-5ca2-a01c-88eae3ea319e"
+version = "0.1.2"
 
 [[Pkg]]
 deps = ["Dates", "LibGit2", "Markdown", "Printf", "REPL", "Random", "SHA", "UUIDs"]
@@ -348,6 +372,12 @@ deps = ["Compat"]
 git-tree-sha1 = "fd159bead0a24e6270fd0573a340312bd4645cc2"
 uuid = "c84ed2f1-dad5-54f0-aa8e-dbefe2724439"
 version = "0.3.0"
+
+[[RecipesBase]]
+deps = ["Pkg", "Random", "Test"]
+git-tree-sha1 = "0b3cb370ee4dc00f47f1193101600949f3dcf884"
+uuid = "3cdcf5f2-1ef4-517c-9805-6587b60abb01"
+version = "0.6.0"
 
 [[Reexport]]
 deps = ["Pkg"]
@@ -423,6 +453,12 @@ deps = ["DataStructures", "LinearAlgebra", "Missings", "Printf", "Random", "Sort
 git-tree-sha1 = "723193a13e8078cec6dcd0b8fe245c8bfd81690e"
 uuid = "2913bbd2-ae8a-5f71-8c99-4fb6c76f3a91"
 version = "0.25.0"
+
+[[SweepOperator]]
+deps = ["LinearAlgebra", "Test"]
+git-tree-sha1 = "2039aaa96f7b21634a1b3246cb2699dd1d26d473"
+uuid = "7522ee7d-7047-56d0-94d9-4bc626e7058d"
+version = "0.2.0"
 
 [[Test]]
 deps = ["Distributed", "InteractiveUtils", "Logging", "Random"]
