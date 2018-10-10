@@ -116,9 +116,13 @@ end
 getradius(sscale, tscale) = 10exp(-1.020819402836599log(sscale) + 0.7668247162044156log(tscale) + 0.8641290371601322)
 
 """
-    main(videofile; start_frame = 1, stop_frame = lastframe(videofile),  spatialscale = 10, temporalscale = 10)
+    seconds, coordinates = main(videofile; start_frame = 1, stop_frame = lastframe(videofile),  spatialscale = 10, temporalscale = 10)
 
 Track a bright spot in a dim video file, `videofile`. Optionally give a frame number to start at, `start_frame`, and stop, `stop_frame`. These default to the beginning and ending of the video file. `spatialscale` and `temporalscale` help subsample the video for faster processing. When these equal 1 then there is no sub-sampling and the video is processed in original spatial and temporal resolutions. For example, for scaling the frame by half its original size and sampling every second frame use `spatialscale = 2, temporalscale = 2`. A default value of 10 for both works well.
+
+# Return variables
+`seconds` is a `Vector{Float64}` of times in second for each of the `coordinates` (itself a `Vector{Tuple{Int, Int}}`).  
+
 
 # Examples
 
