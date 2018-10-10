@@ -9,7 +9,7 @@
 [![Build Status](https://travis-ci.org/yakir12/DarkTracks.jl.svg?branch=master)](https://travis-ci.org/yakir12/DarkTracks.jl)
 [![Build status](https://ci.appveyor.com/api/projects/status/08fa03txrcksrdhf?svg=true)](https://ci.appveyor.com/project/yakir12/darktracks-jl)
 [![codecov.io](http://codecov.io/github/yakir12/DarkTracks.jl/coverage.svg?branch=master)](http://codecov.io/github/yakir12/DarkTracks.jl?branch=master)
-
-
+[![](https://img.shields.io/badge/docs-stable-blue.svg)](https://yakir12.github.io/DarkTracks.jl/stable)
+[![](https://img.shields.io/badge/docs-latest-blue.svg)](https://yakir12.github.io/DarkTracks.jl/latest)
 
 
