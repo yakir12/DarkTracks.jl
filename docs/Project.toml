@@ -1,5 +1,7 @@
 [deps]
+DarkTracks = "bf5bbf7e-c709-11e8-0f4a-896007e6b1d7"
 Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
+FFmpegPipe = "f0ed6883-1047-5070-ab24-66f5d3b648be"
 
 [compat]
 Documenter = "~0.19"
