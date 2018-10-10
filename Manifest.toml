@@ -122,12 +122,12 @@ uuid = "7a1cc6ca-52ef-59f5-83cd-3a7055c09341"
 version = "0.2.4"
 
 [[FFmpegPipe]]
-deps = ["FileIO", "ImageMagick", "Images", "Test"]
-git-tree-sha1 = "ddcc460a02fbba419dacbe5d2dc6ab13f97fb350"
-repo-rev = "master"
+deps = ["FileIO", "ImageMagick", "Images"]
+git-tree-sha1 = "8eeda817d207bee84291adf61691d03d811a49db"
+repo-rev = "4123902a7eac47e6fba0510df8ca3740f2b45617"
 repo-url = "https://github.com/yakir12/FFmpegPipe.jl"
-uuid = "fa0b58cb-525a-50a0-94eb-df6eb4f580b6"
-version = "0.0.0"
+uuid = "f0ed6883-1047-5070-ab24-66f5d3b648be"
+version = "0.1.0"
 
 [[FileIO]]
 deps = ["Pkg", "Random", "Test"]

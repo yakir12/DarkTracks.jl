@@ -4,6 +4,15 @@ export main
 
 using FFmpegPipe, OnlineStats, Statistics, IdentityRanges, Dates, Images, Unitful, DelimitedFiles, Printf, JSON#, ImageDraw
 
+
+function lastframe(videofile)
+    str = read(`ffprobe -show_streams -of json -v quiet -i $videofile`, String)
+    jsn = JSON.parse(str)
+    stream = findfirst(x -> x["codec_type"] == "video", jsn["streams"])
+    txt = jsn["streams"][stream]["nb_frames"]
+    parse(Int, txt)
+end
+
 function getdimensions(videofile, start_frame, stop_frame)
     str = read(`ffprobe -show_streams -of json -v quiet -i $videofile`, String)
     jsn = JSON.parse(str)
@@ -106,7 +115,22 @@ end
 
 getradius(sscale, tscale) = 10exp(-1.020819402836599log(sscale) + 0.7668247162044156log(tscale) + 0.8641290371601322)
 
-function main(videofile, start_frame, stop_frame,  spatialscale, temporalscale)
+"""
+    main(videofile; start_frame = 1, stop_frame = lastframe(videofile),  spatialscale = 10, temporalscale = 10)
+
+Track a bright spot in a dim video file, `videofile`. Optionally give a frame number to start at, `start_frame`, and stop, `stop_frame`. These default to the beginning and ending of the video file. `spatialscale` and `temporalscale` help subsample the video for faster processing. When these equal 1 then there is no sub-sampling and the video is processed in original spatial and temporal resolutions. For example, for scaling the frame by half its original size and sampling every second frame use `spatialscale = 2, temporalscale = 2`. A default value of 10 for both works well.
+
+# Examples
+
+```jldoctest; setup = :(using DarkTracks; videofile = abspath(joinpath(dirname(pathof(DarkTracks)), "..", "test", "testvideo.mp4")))
+julia> main(videofile, stop_frame = 100, spatialscale = 10)
+([1.32, 1.54, 1.76, 1.98], Tuple{Int64,Int64}[(510, 730), (520, 730), (520, 730), (520, 730)])
+
+```
+
+
+"""
+function main(videofile; start_frame = 1, stop_frame = lastframe(videofile),  spatialscale = 10, temporalscale = 10)
     w₀, h₀, fps₀, start_second, duration_second = getdimensions(videofile, start_frame, stop_frame)
     w, h, fps = warpdimensions(w₀, h₀, fps₀, spatialscale, temporalscale)
     sz = (h, w)
