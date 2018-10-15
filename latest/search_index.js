@@ -29,7 +29,7 @@ var documenterSearchIndex = {"docs": [
     "page": "DarkTracks.jl",
     "title": "Installation",
     "category": "section",
-    "text": "If you haven\'t already, install the current release of Julia -> you should be able to launch it (some icon on the Desktop or some such).\nStart Julia -> a Julia-terminal popped up.\nCopy: \nusing Pkg\nPkg.add(\"https://github.com/yakir12/DarkTracks.jl\")\nand paste it in the newly opened Julia-terminal, press Enter.\n(not necessary) To test the package, copy: \nPkg.test(\"DarkTracks\")\nand paste it in the Julia-terminal. Press enter to check if all the tests pass -> this may take some time (all tests should pass).\nYou can close the Julia-terminal after it\'s done running."
+    "text": "If you haven\'t already, install the current release of Julia -> you should be able to launch it (some icon on the Desktop or some such).\nStart Julia -> a Julia-terminal popped up.\nCopy: \nusing Pkg\nPkg.add(PackageSpec(url = \"https://github.com/yakir12/DarkTracks.jl\"))\nand paste it in the newly opened Julia-terminal, press Enter.\n(not necessary) To test the package, copy: \nPkg.test(\"DarkTracks\")\nand paste it in the Julia-terminal. Press enter to check if all the tests pass -> this may take some time (all tests should pass).\nYou can close the Julia-terminal after it\'s done running."
 },
 
 {
