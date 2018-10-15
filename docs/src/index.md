@@ -17,7 +17,7 @@ You have to have `ffmpeg` installed (this package also utilizes `ffprobe`, which
 3. Copy: 
    ```julia
    using Pkg
-   Pkg.add("https://github.com/yakir12/DarkTracks.jl")
+   Pkg.add(PackageSpec(url = "https://github.com/yakir12/DarkTracks.jl"))
    ```
    and paste it in the newly opened Julia-terminal, press Enter.
 4. (*not necessary*) To test the package, copy: 
