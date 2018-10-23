@@ -5,13 +5,11 @@ version = "0.1.0"
 
 [deps]
 Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
-DelimitedFiles = "8bb1440f-4735-579b-a4ab-409b98df4dab"
 FFmpegPipe = "f0ed6883-1047-5070-ab24-66f5d3b648be"
 IdentityRanges = "bbac6d45-d8f3-5730-bfe4-7a449cd117ca"
 Images = "916415d5-f1e6-5110-898d-aaa5f9f070e0"
 JSON = "682c06a0-de6a-54ab-a142-c8b1cf79cde6"
 OnlineStats = "a15396b6-48d5-5d58-9928-6d29437db91e"
-Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
 Statistics = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
 Unitful = "1986cc42-f94f-5a68-af5c-568840ba703d"
 
