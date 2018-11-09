@@ -5,6 +5,7 @@ version = "0.1.0"
 
 [deps]
 Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
+DelimitedFiles = "8bb1440f-4735-579b-a4ab-409b98df4dab"
 FFmpegPipe = "f0ed6883-1047-5070-ab24-66f5d3b648be"
 IdentityRanges = "bbac6d45-d8f3-5730-bfe4-7a449cd117ca"
 Images = "916415d5-f1e6-5110-898d-aaa5f9f070e0"

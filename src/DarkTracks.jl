@@ -2,7 +2,7 @@ module DarkTracks
 
 export main
 
-using FFmpegPipe, OnlineStats, Statistics, IdentityRanges, Dates, Images, Unitful, JSON#, Printf, DelimitedFiles, ImageDraw
+using FFmpegPipe, OnlineStats, Statistics, IdentityRanges, Dates, Images, Unitful, JSON, DelimitedFiles#, Printf, , ImageDraw
 
 
 function lastframe(videofile)
