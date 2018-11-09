@@ -73,14 +73,14 @@ function track(r₀, vi, noise, n, sz)
     inds
 end
 
-#=function savedata(videofile, ts, inds)
+function savedata(videofile, ts, inds)
     path, nameext = splitdir(videofile)
     name, _ = splitext(nameext)
     csvname = joinpath(path, "$name.csv")
-    xs = ["x"; getindex.(inds, 2)]
-    ys = ["y"; getindex.(inds, 1)]
+    xs = ["x"; getindex.(inds, 1)]
+    ys = ["y"; getindex.(inds, 2)]
     writedlm(csvname, zip(["seconds"; ts], xs, ys))
-end=#
+end
 
 #=function drawit(videofile, n, inds, imgs)
     path, nameext = splitdir(videofile)
@@ -148,7 +148,7 @@ function main(videofile; start_frame = 1, stop_frame = lastframe(videofile),  sp
 
     tss = [t for (t, ind) in zip(ts, inds) if !ismissing(ind)]
     indss = [spatialscale.*Tuple(ind) for ind in inds if !ismissing(ind)]
-    # savedata(videofile, tss, indss)
+    savedata(videofile, tss, indss)
     tss, indss
     # drawit(videofile, n, inds, imgs)
 end
